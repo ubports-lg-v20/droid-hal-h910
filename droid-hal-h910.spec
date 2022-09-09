@@ -7,8 +7,27 @@
 %define vendor_pretty LG
 %define device_pretty LG V20 ATT
 
-%define installable_zip 1
+%define straggler_files \
+/bugreports\
+/d\
+/plat_file_contexts\
+/plat_hwservice_contexts\
+/plat_property_contexts\
+/plat_seapp_contexts\
+/plat_service_contexts\
+/product\
+/sdcard\
+/vendor\
+/vendor_file_contexts\
+/vendor_hwservice_contexts\
+/vendor_property_contexts\
+/vendor_seapp_contexts\
+/vendor_service_contexts\
+/vndservice_contexts\
+%{nil}
 
+%define installable_zip 1
+%define droid_target_aarch64 1
 %include rpm/dhd/droid-hal-device.inc
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
